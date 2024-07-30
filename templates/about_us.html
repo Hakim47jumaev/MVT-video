@@ -1,0 +1,65 @@
+{% extends "home.html" %}
+<title>Contacts</title>
+{% block content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    .contact-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    .contact-list li {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+    .contact-list li:last-child {
+        border-bottom: none;
+    }
+    .contact-list li a {
+        text-decoration: none;
+        color: #007bff;
+    }
+    .contact-list li a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Contacts</h1>
+    <ul class="contact-list">
+        <li>
+            <strong>John Doe</strong><br>
+            Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a><br>
+            Phone: <a href="tel:+1234567890">+1 (234) 567-890</a>
+        </li>
+        <li>
+            <strong>Jane Smith</strong><br>
+            Email: <a href="mailto:jane.smith@example.com">jane.smith@example.com</a><br>
+            Phone: <a href="tel:+1987654321">+1 (987) 654-321</a>
+        </li>
+        <!-- Add more contacts as needed -->
+    </ul>
+</div>
+
+</body>
+{% endblock content %}

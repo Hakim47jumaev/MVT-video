@@ -1,0 +1,58 @@
+{% extends "home.html" %}
+ 
+{% block content %}
+<style>
+     
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; 
+    margin: 0;
+    padding: 0;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.video-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.movie-video {
+    width: 100%;  
+    height: auto;  
+    border-radius: 8px; 
+    margin-top: 10px;
+}
+
+.video-container p {
+    font-size: 16px;
+    color: #666;  
+    margin-bottom: 5px;
+}
+
+.video-container strong {
+    font-weight: bold; 
+}
+
+</style>
+<div class="video-container">
+    <h1>{{ video.title }}</h1>
+    <video class="movie-video" controls>
+        <source src="{{ video.video.url }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p><strong>Channel:</strong> {{ video.channal_name }}</p>
+    <p><strong>Category:</strong> {{ video.category }}</p>
+    <p><strong>Uploaded:</strong> {{ video.add_date }}</p>
+    <p><strong>Description:</strong> {{ video.discription }}</p>
+</div> 
+{% endblock content %}
